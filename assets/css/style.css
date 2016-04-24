@@ -1,0 +1,134 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    background-color: #c7e1ff;
+}
+/*******************************************/
+/*                  PANELS
+/*******************************************/
+.parallaxParent {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallaxParent > * {
+  height: 200%;
+  position: relative;
+  top: -100%;
+}
+
+#parallax2 {
+  overflow: scroll;
+}
+.cover-panel {
+  background-image: url('/assets/img/cover.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.involved-panel {
+  background-image: url('/assets/img/get-involved.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*******************************************/
+/*               TITLE BARS
+/*******************************************/
+.box1, .box2, .box3 {
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    border: 0px solid white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+
+/*******************************************/
+/*                  IMAGES
+/*******************************************/
+.cover {
+  display: block;
+  height: 1600px;
+  width: 100%;
+}
+
+/*******************************************/
+/*                  VIDEOS
+/*******************************************/
+video#bgvid { 
+  position: fixed;
+  padding-top: 20%;
+  width: 100%;
+  background-size: cover; 
+  transition: 1s opacity;
+
+}
+
+
+/*******************************************/
+/*               FLOATING TEXT
+/*******************************************/
+#video-text {
+  font-weight:100; 
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: left;
+  font-size: 1.2rem;
+}
+
+#about-text {
+  font-weight:100; 
+  color: white;
+  padding: 2rem;
+  width: 80%;
+  margin-top:20rem;
+  float: left;
+  font-size: 0.8rem;
+  background: rgba(0,0,0,0.3);
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+/*******************************************/
+/*               Buttons
+/*******************************************/
+.contact-button{
+  position: relative;
+}
+
+/*******************************************/
+/*                  COLOURS
+/*******************************************/
+.blue {
+    background-color: #3883d8;
+}
+.turqoise {
+    background-color: #38ced7;
+}
+.green {
+    background-color: #22d659;
+}
+
+.bordeaux {
+    background-color: #953543;
+}
