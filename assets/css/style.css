@@ -62,6 +62,11 @@ html,body
     font-size: 16px;
     line-height: 18px;
 }
+
+@font-face {
+  font-family: CarnivalFont;
+  src: url('../fonts/QuinchoScript_PersonalUse.ttf');
+}
 /*******************************************/
 /*                  PANELS
 /*******************************************/
@@ -71,26 +76,19 @@ html,body
 }
 
 #parallax1 {
-  overflow: hidden;
-  height: 100vh;
   background-color: #000;
 }
-
-/*#parallax2 {
-  overflow: scroll;
-}*/
-.cover-panel {
-  background-image: url('/assets/img/cover.jpg');
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: cover;
+#parallax3 {
+  background: #f20265;
 }
 
 .involved-panel {
-  background-image: url('/assets/img/get-involved.jpg');
+  position: relative;
+  height: 100vh;
+  background-image: url('../img/contact-bg.jpg');
   background-repeat:no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
 }
 
 /*******************************************/
@@ -116,7 +114,7 @@ html,body
 }
 
 /*******************************************/
-/*                  VIDEOS
+/*                  VIDEOS/gif
 /*******************************************/
 .bgvid { 
   position: absolute;
@@ -128,6 +126,11 @@ html,body
   top: 0;
   left: 0;
   overflow-y: hidden;
+}
+
+.splash-gif {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -152,9 +155,16 @@ html,body
   width: 80%;
   display: block;
   margin: 0 auto;
-  margin-top: 10%;
   font-size: 0.8rem;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.7);
+  z-index: 10;
+  top: 80%;
+  transform: translateY(80%);
+  -ms-transform: translateY(80%);
+  -webkit-transform: translateY(80%);
+}
+.about-text p{
+  padding: 5px;
 }
 
 h1 {
@@ -166,13 +176,13 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: .3rem;
+  font-family: CarnivalFont, sans-serif;
+  font-size: 5rem;
   line-height: 3rem;
+  padding-bottom: 1rem;
 }
 /*******************************************/
-/*               Buttons
+/*               BUTTONS
 /*******************************************/
 .contact-button{
   position: relative;
@@ -200,10 +210,15 @@ h2 {
 /*******************************************/
 /*                  TO BE EDITED
 /*******************************************/
+.buttons-container {
+  position: relative;
+  display: block;
+  padding-top: 25%;
+}
 .buttons {
   display: block;
   margin: 0 auto;
-  max-width: 1310px;
+  max-width: 900px;
 }
 
 .buttons li {
@@ -211,22 +226,46 @@ h2 {
 }
 
 .btn-default {
-  margin: 15px 5px;
-}
-.dropdown-form {
-  position: absolute;
-  top: 700px;
-  left: 50%;
-  transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  margin: 15px 10px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  max-width: 30%;
   width: 100%;
-  max-width: 1100px;
-  display: none;
 }
-@media screen and (max-width: 768px) {
-  .dropdown-form {
-    width: 100%;
-    max-width: 500px;
-  }
+
+.about-panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+    -webkit-animation: animate_bg 15s;
+    animation: animate_bg 15s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate_bg {
+    0%   {background: #44cec9;}
+    33%  {background: #ddfa02;}
+    66%  {background: #5fd027;}
+    100% {background: #44cec9;}
+}
+
+@-webkit-keyframes animate_bg {
+    0%   {background: #44cec9;}
+    33%  {background: #ddfa02;}
+    66%  {background: #5fd027;}
+    100% {background: #44cec9;}
+}
+
+.about__carnival-head {
+
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  
+  background: url('../img/carnival-head.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  
 }
