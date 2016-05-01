@@ -6,94 +6,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Pangaea is an award winning student-led festival from Manchester">
     <meta name="author" content="Izz Abudaka & Tamas Kolcsey" />
-    <title>Pangaea Festival</title>
+    <title>Pangaea Festival | Carnival</title>
     
     <!-- Stylesheets -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/style.css">
-
     
-
-    <!-- Scripts --> 
+    <!-- Fonts -->
+    <link href='assets/fonts/MACHO.ttf' rel='stylesheet' type='text/css'>
+    
+    <!-- Scripts -->
+    <script type='text/javascript' src='assets/js/capture.js'></script>	
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js'></script>
+    
     <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.3/TweenMax.min.js'></script>
     <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js'></script>
     <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
     <script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js'></script>
-    <script type="text/javascript" src='assets/js/scroll.js'></script>
+    
+    <script type="text/javascript" src='assets/js/scroll.js'></script> 
     <script type="text/javascript" src='assets/js/getArtists.js'></script>
+    <script type="text/javascript" src='assets/js/script.js'></script>
+
+    <!-- Facebook  -->
+    <meta property="og:title" content="Pangaea Festival - Carnival">
+    <meta property="og:url" content="http://pangaeafestival.co.uk/">
+    <meta property="og:image" content="http://pangaeafestival/assets/img/fb-og-image.jpg">
+    <meta property="og:description" content="Pangaea Festival Carnival">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
 
   </head>
   <body>
+    
+    <nav class="navbar">
+      <div class="navbar-container">
 
-    <div id='parallax1' class='parallaxParent'>
-      
-      <!-- <div class='video-text'>
-        <h1>Pangaea Festival</h1>
-      </div> -->
-      <!-- <video autoplay muted class="bgvid" loop>
-        <source src="assets/video/cover-video.mp4">
-      </video> -->
-
-       <img src="assets/img/panjun.gif" alt="Pangaea Carnival Theme Launch - 9th of June" class="splash-gif"> 
-    </div>
-
-    <div id='parallax2' class='parallaxParent'>
-      <div class='about-panel'>
-        <div class="about__carnival-head"></div>
-        <div class='about-text'>
-          <h2>Carnival</h2>
-          <p>
-            This Summer, Pangaea Festival is excited to present a celebration of life, bringing together sound, energy and creativity, from the most exciting and colourful carnivals! Party with passion and spirit at our biggest and best party ever; join us as we transform the Students’ Union with illustrious, elaborate installations and décor into a tropical paradise to delight your senses. Enjoy this collective celebration of the world’s most beautiful carnivals– discover lush splendour, dazzling delights and all-round good vibes, with only the fruitiest of cocktails in your hand.
-          </p>
-          <p>
-            For this uniquely Manchester all-night party suspend your disbelief, prepare yourself to celebrate life and come with a first-class attitude - as you always do. It’s the last one of the year and it might be your last one ever; make the most of it and don’t miss out on this special occasion of revelry. Join 7,000 fellow students and let music will take you on a journey through house, techno, grime, disco, funky, afrobeat, hip hop, bashment, reggae, dubstep, latin, jungle, bass, indie, pop and more to explore 15 rooms of fun throughout the Students’ Union and Manchester Academy venues.
-          </p>
-          <p>
-            June’s festival is formed out of the pixelated fun of our biggest Winter Pangaea yet. January’s LEVEL 10 saw artists like Katy B, Mount Kimbie, Swim Deep, Congo Natty, Move D, Eton Messy, Champion and Dub Phizix keeping you dancing as you conquered many terrains and obstacles in some of the most outrageous costumes we’ve yet seen.
-          </p>
-          <p>
-            Well now the sun is shining and summer is nearly here, so get on your finest garms and begin in it style because… it’s Carnival time!
-          </p>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-menu">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/nav-logo.png" alt="Pangaea Festival Carnival Logo">
+          </a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li><a href="#lineup">Lineup</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#get-involved">Get Involved</a></li>
+        
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div id='parallax1' class='parallaxParent splash-panel'>
+      <div class="panel__container">
+          <img src="assets/img/header-logo.png" alt="Pangaea Festival Carnival Logo">
+          <div class="cta-full"><a href="#">Tickets</a></div>
+          <div class="cta-empty"><a href="#">Watch last edition trailer</a></div>
       </div>
+      
     </div>
 
-    <div id='parallax3' class='parallaxParent'>
+    <div id='parallax2' class='parallaxParent about-panel'>
+        <div class="panel__container">
+
+          <div class="feather-separator">
+            <img src="assets/img/feathers-separator.jpg" alt="Section Separator">
+          </div>
+
+          <div class='about-text'>
+            <h2>Carnival</h2>
+            <p>
+              This Summer, Pangaea Festival is excited to present a celebration of life, bringing together sound, energy and creativity, from the most exciting and colourful carnivals! Party with passion and spirit at our biggest and best party ever; join us as we transform the Students’ Union with illustrious, elaborate installations and décor into a tropical paradise to delight your senses. Enjoy this collective celebration of the world’s most beautiful carnivals– discover lush splendour, dazzling delights and all-round good vibes, with only the fruitiest of cocktails in your hand.
+            </p>
+            <p>
+              For this uniquely Manchester all-night party suspend your disbelief, prepare yourself to celebrate life and come with a first-class attitude - as you always do. It’s the last one of the year and it might be your last one ever; make the most of it and don’t miss out on this special occasion of revelry. Join 7,000 fellow students and let music will take you on a journey through house, techno, grime, disco, funky, afrobeat, hip hop, bashment, reggae, dubstep, latin, jungle, bass, indie, pop and more to explore 15 rooms of fun throughout the Students’ Union and Manchester Academy venues.
+            </p>
+            <p>
+              June’s festival is formed out of the pixelated fun of our biggest Winter Pangaea yet. January’s LEVEL 10 saw artists like Katy B, Mount Kimbie, Swim Deep, Congo Natty, Move D, Eton Messy, Champion and Dub Phizix keeping you dancing as you conquered many terrains and obstacles in some of the most outrageous costumes we’ve yet seen.
+            </p>
+            <p>
+              Well now the sun is shining and summer is nearly here, so get on your finest garms and begin in it style because… it’s Carnival time!
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <div id='parallax3' class='parallaxParent lineup-panel'>
+        <div class="panel__container">
+          <h2>Lineup</h2>
+        </div>
+    </div>
+
+    <div id='parallax3' class='parallaxParent tickets-panel'>
+        <div class="panel__container">
+          <h2>Tickets</h2>
+        </div>
+    </div>
+
+    <div id='parallax5' class='parallaxParent'>
       <div class='involved-panel'>
           <div class="buttons-container">
+            <h2>Get Involved</h2>
             <ul class="buttons">
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaRoomHosts" role="button">Host a Room</a>  
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaRoomHosts" role="button">Host a Room</a>  
                </li>
 
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaBands" role="button">Bands and Performers</a>
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaBands" role="button">Bands and Performers</a>
                </li>
 
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaSocieties" role="button">Societies</a> 
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaSocieties" role="button">Societies</a> 
                </li>
 
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaDJs" role="button">DJ at the Festival</a>
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaDJs" role="button">DJ at the Festival</a>
                </li>
 
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaPartnerships" role="button">Partnerships & Sponsorships</a>
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaPartnerships" role="button">Partnerships & Sponsorships</a>
                </li>
 
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaVendors" role="button">Vendors & Food</a>   
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaVendors" role="button">Vendors & Food</a>   
                </li>
 
-              <li>
-               <a class="btn btn-default btn-lg" href="http://bit.ly/PangaeaPress" role="button">Press & Media</a>  
+              <li class="col-xs-3">
+               <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaPress" role="button">Press & Media</a>  
                </li>
 
             </ul>
           </div>
       </div>
     </div>
+
+    <footer>
+    </footer>
   </body>
 </html>

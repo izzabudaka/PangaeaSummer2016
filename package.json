@@ -12,5 +12,13 @@
     "express": "^4.13.4",
     "path": "^0.12.7",
     "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
   }
 }

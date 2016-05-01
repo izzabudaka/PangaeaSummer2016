@@ -4,11 +4,11 @@ $(function () { // wait for document ready
 
   // build scenes
   new ScrollMagic.Scene({triggerElement: "#parallax1"})
-          .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
+          .setTween("#parallax1 > div", {y: "60%", ease: Linear.easeNone})
           .addTo(controller);
 
   new ScrollMagic.Scene({triggerElement: "#parallax2"})
-          .setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
+          .setTween("#parallax2 > div", {y: "15%", ease: Linear.easeNone})
           .addTo(controller);
 
   new ScrollMagic.Scene({triggerElement: "#parallax3"})
@@ -17,5 +17,8 @@ $(function () { // wait for document ready
 
   new ScrollMagic.Scene({triggerElement: "#parallax4"})
           .setTween("#parallax4 > div", {y: "80%", ease: Linear.easeNone})
+          .addTo(controller);
+  new ScrollMagic.Scene({triggerElement: "#parallax5"})
+          .setTween("#parallax5 > div", {y: "80%", ease: Linear.easeNone})
           .addTo(controller);
 });
