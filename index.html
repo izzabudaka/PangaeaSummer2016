@@ -74,10 +74,15 @@
     </nav>
 
     <div id='parallax1' class='parallaxParent splash-panel'>
+        <video autoplay muted class="bgvid" loop>
+          <source src="assets/video/cover-video.mp4">
+        </video>
       <div class="panel__container">
           <img src="assets/img/header-logo.png" alt="Pangaea Festival Carnival Logo">
-          <div class="cta-full"><a href="#">Tickets</a></div>
-          <div class="cta-empty"><a href="#">Watch last edition trailer</a></div>
+          <div class="cta-container">
+            <a class="cta-full" href="#">Tickets</a>
+            <a class="cta-empty" href="#">Watch last edition trailer</a>
+          </div>
       </div>
       
     </div>
@@ -120,10 +125,10 @@
     </div>
 
     <div id='parallax5' class='parallaxParent'>
-      <div class='involved-panel'>
-          <div class="buttons-container">
+      <div class='panel__container'>
             <h2>Get Involved</h2>
-            <ul class="buttons">
+
+            <ul class="buttons row">
               <li class="col-xs-3">
                <a class="btn btn-default" target="_blank" href="http://bit.ly/PangaeaRoomHosts" role="button">Host a Room</a>  
                </li>
@@ -153,8 +158,9 @@
                </li>
 
             </ul>
-          </div>
-      </div>
+
+      </div> <!-- end panel__container -->
+      <div class="end-bg"></div>
     </div>
 
     <footer>
