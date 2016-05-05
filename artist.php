@@ -4,7 +4,7 @@
   $artists = array();
   foreach($xml->artist as $artist)
   {
-    $artists[] = (string)$artist->website;
+    $artists[] = (string)$artist->name;
   }
   echo json_encode($artists);
 ?>

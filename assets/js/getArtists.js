@@ -1,5 +1,5 @@
 $.ajax({
-  url: "/~Home/artists/",
+  url: "artists/",
 })
   .done(function( data ) {
     if ( console && console.log ) {
