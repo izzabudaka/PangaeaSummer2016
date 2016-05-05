@@ -1,17 +1,12 @@
 <?php
   function getImageUrl($artistName){
-    $xmlString = file_get_contents("http://marcatoweb.com/xml/artists_23241.xml");
+    $xmlString = file_get_contents("http://marcatoweb.com/xml/artists_23491.xml");
     $xml = new SimpleXMLElement($xmlString);
     foreach($xml->artist as $artist)
     {
       $thisArtist = (string)$artist->name;
       if(trim($thisArtist) == trim($artistName)){
-        foreach($artist->websites->website as $website)
-        {
-          if($website->name == "image"){
-            return (string)$website->url;
-          }
-        }
+        return (string)$artist->web_photo_url;
       }
     }
   }
