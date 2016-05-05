@@ -1,4 +1,8 @@
 <?php
+  function endsWith($haystack, $needle) {
+      // search forward starting from end minus needle length characters
+      return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== false);
+  }
   function getImageUrl($artistName){
     $xmlString = file_get_contents("http://marcatoweb.com/xml/artists_23491.xml");
     $xml = new SimpleXMLElement($xmlString);
@@ -26,13 +30,12 @@
     curl_close($ch); 
 
     $im = @imagecreatefromstring($image); 
-    return $im;
+    header("Content-Type: image/jpg");
+    imagejpeg($im,NULL,100);
   }
 
   if (isset($_GET['artist'])) {
       $artist = str_replace("%20"," ",$_GET['artist']);
-      $image = getArtistImage($artist);
-      header("Content-Type: image/jpg");
-      imagejpeg($image,NULL,100);
+      getArtistImage($artist);
   }
 ?>

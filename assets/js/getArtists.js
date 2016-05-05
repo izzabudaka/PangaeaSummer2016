@@ -29,6 +29,7 @@ function initialiseSlick(){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    arrows: true,
     fade: true,
     asNavFor: '.artists-names'
   });
@@ -36,7 +37,7 @@ function initialiseSlick(){
     slidesToShow: 3,
     slidesToScroll: 1,
     asNavFor: '.artists-images',
-    dots: true,
+    autoplay: true,
     centerMode: true,
     focusOnSelect: true
   });
