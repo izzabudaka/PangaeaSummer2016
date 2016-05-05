@@ -542,8 +542,9 @@ h2 {
 .buttons {
   margin-top: 13%; }
   .buttons li {
-    margin: 10px 0;
-    padding: 10px 0; }
+    margin: 20px 0;
+    padding: 10px 0;
+    box-sizing: border-box; }
 
 .btn {
   text-decoration: none;
@@ -554,7 +555,6 @@ h2 {
   padding: 10px;
   background: orange;
   border-radius: 4px;
-  padding: 10px 20px;
   box-sizing: border-box;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
