@@ -212,8 +212,17 @@ body {
   clear: both; }
 
 #parallax1 {
-  height: 90vh;
+  height: 700px;
   background-color: #000; }
+
+#parallax2 {
+  height: 700px;}
+
+#parallax3 {
+  height: 1000px;}
+
+#parallax4 {
+  height: 300px;}
 
 #parallax5 {
   background: url("../img/footer-bg.jpg") no-repeat bottom center;
