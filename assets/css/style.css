@@ -219,7 +219,7 @@ body {
   height: 700px; }
 
 #parallax3 {
-  height: 1000px; }
+  height: 700px; }
 
 #parallax4 {
   height: 300px; }
@@ -549,13 +549,14 @@ h2 {
     padding-bottom: 7px; }
 
 .buttons {
-  margin-top: 13%; }
+  margin-top: 5%; }
   .buttons li {
     margin: 20px 0;
     padding: 10px 0;
     box-sizing: border-box; }
 
 .btn {
+  display: block;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
@@ -565,6 +566,7 @@ h2 {
   background: orange;
   border-radius: 4px;
   box-sizing: border-box;
+  margin: 0 10px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -575,3 +577,9 @@ h2 {
     animation: animate_bg 15s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
+
+.btn-tickets {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 30px; }
