@@ -1,0 +1,47 @@
+//=================================
+//			Flexbox
+//=================================
+@mixin Flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flex-justify($position) {
+	-webkit-box-pack: $position;
+    -webkit-justify-content: $position;
+    -ms-flex-pack: $position;
+    justify-content: $position;
+}
+
+@mixin flex-align($position) {
+	 -webkit-box-align: $position;
+  -webkit-align-items: $position;
+      -ms-flex-align: $position;
+          align-items: $position;
+}
+
+@mixin flex-direction($XY, $direction) {
+	-webkit-box-orient: $XY;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+//=================================
+//			TransitionAll
+//=================================
+@mixin transitionAll($sec) {
+	-webkit-transition: all $sec ease-in-out;
+    -moz-transition: all $sec ease-in-out;
+    -o-transition: all $sec ease-in-out;
+    transition: all $sec ease-in-out;
+}
+@mixin transitionAllEase($sec) {
+  -webkit-transition: all $sec ease;
+    -moz-transition: all $sec ease;
+    -o-transition: all $sec ease;
+    transition: all $sec ease;
+}

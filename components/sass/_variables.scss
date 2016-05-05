@@ -1,0 +1,31 @@
+// Fonts ================
+@font-face {
+font-family: MontBold;
+src: url("../fonts/Montserrat-Bold.otf") format("opentype");
+}
+@font-face {
+font-family: MontLight;
+src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+@font-face {
+font-family: Macho;
+src: url("../fonts/MACHO.ttf");
+}
+
+$Macho		: 'Macho', Helvetica, sans-serif;
+$Mont-bold	: 'MontBold', Helvetica, sans-serif;
+$Mont-light	: 'MontLight', Helvetica, sans-serif;
+
+
+
+// Colours ==============
+$blue			: #44cfca;
+$black			: #555555;
+
+
+// Breakpoints ==========
+
+$break-xs		: 320px;
+$break-s		: 480px;
+$break-m		: 768px;
+$break-l		: 992px;
