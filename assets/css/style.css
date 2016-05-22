@@ -351,6 +351,10 @@ h2 {
     margin-left: -15px; } }
 
 .navbar-collapse {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
   border-top: 1px solid transparent;
@@ -359,6 +363,7 @@ h2 {
 
 @media (min-width: 992px) {
   .navbar-collapse {
+    display: block;
     width: auto;
     border-top: 0;
     -webkit-box-shadow: none;
@@ -387,18 +392,36 @@ h2 {
   background-color: transparent;
   background-image: none;
   border: 1px solid #fff;
-  border-radius: 4px; }
+  border-radius: 4px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+  .navbar-toggle:hover {
+    cursor: pointer; }
 
 .navbar-toggle:focus {
   outline: 0; }
 
 .navbar-toggle .icon-bar {
   display: block;
+  position: absolute;
   width: 22px;
   height: 2px;
   border-radius: 1px;
   background-color: #fff;
-  float: right; }
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
 
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px; }
@@ -410,11 +433,13 @@ h2 {
   float: left; }
 
 .navbar-nav {
-  position: absolute;
+  position: relative;
   left: 0px;
   height: 250px;
   width: 100%;
+  top: -37px;
   margin-top: 50px;
+  z-index: -9999;
   background: #555555;
   display: -webkit-box;
   display: -webkit-flex;
@@ -455,6 +480,7 @@ h2 {
       margin-top: 0px;
       width: 100%;
       left: -5%;
+      top: 0px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -webkit-flex-direction: row;
@@ -470,6 +496,50 @@ h2 {
         margin-right: 0;
         padding-top: 0;
         border-bottom: 1px solid transparent; } }
+
+/* ============= Hamburger Menu Animation ================ */
+.navbar-toggle span:nth-child(3) {
+  top: 9px;
+  right: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center; }
+
+.navbar-toggle span:nth-child(4) {
+  top: 13px;
+  right: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center; }
+
+.navbar-toggle span:nth-child(5) {
+  top: 21px;
+  right: 10px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center; }
+
+.navbar-toggle.open span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 9px;
+  right: 10px; }
+
+.navbar-toggle.open span:nth-child(4) {
+  width: 0%;
+  opacity: 0; }
+
+.navbar-toggle.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 20px; }
 
 .bgvid {
   position: absolute;

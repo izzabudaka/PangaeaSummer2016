@@ -39,6 +39,7 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
 
   </head>
+<meta name="google-site-verification" content="K6cdjENEG8VsRdq8PRhXzzT1uICQHWjtMhTyUw8_YLU" />
   <body>
     
     <nav class="navbar">
@@ -46,7 +47,7 @@
 
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <button type="button" class="navbar-toggle" id="navbar-button" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-menu">Menu</span>
             <span class="icon-bar"></span>
@@ -169,7 +170,7 @@
     <footer>
     </footer>
     
-      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
       <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <script type="text/javascript" src="assets/js/slick.min.js"></script>
       <script type="text/javascript" src='assets/js/getArtists.js'></script>
@@ -177,5 +178,18 @@
       <!-- Scrolling Nav JavaScript -->
       <script src="assets/js/jquery.easing.min.js"></script>
       <script src="assets/js/scrolling-nav.js"></script>
+      <script>
+      if ($(window).width() < 992) {
+          $(document).ready(function() {
+            $('.nav').hide();
+          });
+        }
+
+          $("#navbar-button").click(function() {
+              $(".navbar-nav").slideToggle("slow");
+              $(this).toggleClass('open');
+              console.log("navbar-menu is clicked");
+          });
+      </script>
   </body>
 </html>
