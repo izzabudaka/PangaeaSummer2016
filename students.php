@@ -5,7 +5,7 @@
   foreach($xml->artist as $artistXml)
   {
     $categories = implode( ' ', (array)$artistXml->categories->category);
-    if (strpos($categories, 'Student') === false && strpos($categories, 'Room Hosting') === false) {
+    if (strpos($categories, 'Student') !== false || strpos($categories, 'Room Hosting') !== false) {
       $artists[(string)$artistXml->name] =(string)$artistXml->bio_public;
     }
   }

@@ -1,9 +1,9 @@
 $.ajax({
-  url: "artists/",
+  url: "students/",
 })
   .done(function( data ) {
     if ( console && console.log ) {
-      getArtists(data);
+      getStudents(data);
     }
 });
 function getArtistDescription(artistName, bio) {
@@ -15,7 +15,7 @@ function getArtistDescription(artistName, bio) {
     }
 }
 
-function getArtists(artistsString) {
+function getStudents(artistsString) {
   var artistsJson = JSON.parse(artistsString);
   var artistsNames = Object.keys(artistsJson);
   var artists = '<div class="artists-images">';
@@ -27,5 +27,5 @@ function getArtists(artistsString) {
           '</div>';
   }
   artists += '</div>';
-  $('.lineup').append(artists);
+  $('.student').append(artists);
 }
