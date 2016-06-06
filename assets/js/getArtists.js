@@ -6,39 +6,27 @@ $.ajax({
       getArtists(data);
     }
 });
-
-function getArtists(artistsString){
-  var artists = JSON.parse(artistsString);
-  var artistsImages = "<div class='artists-images'>";
-  var artistsNames = "<div class='artists-names'>"
-  for (var i = 0; i < artists.length; i++) {   
-    artistsImages += "<div>"+
-                   '<img style="display:inline;" src="artistImage?artist='+artists[i]+'" height="400px" weight="400px">'
-                   +"</div>";
-    artistsNames += "<div>"+artists[i]+"</div>";
-  }
-  artistsImages += "</div>";
-  artistsNames += "</div>";
-  $('.lineup').append(artistsImages);
-  $('.lineup').append(artistsNames);
-  initialiseSlick();
+function getArtistDescription(artistName, bio) {
+    var description = '';
+    if('' == bio){
+      return artistName;
+    } else {
+      return bio;
+    }
 }
 
-function initialiseSlick(){
-   $('.artists-images').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    arrows: true,
-    fade: true,
-    asNavFor: '.artists-names'
-  });
-  $('.artists-names').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.artists-images',
-    autoplay: true,
-    centerMode: true,
-    focusOnSelect: true
-  });
+function getArtists(artistsString) {
+  var artistsJson = JSON.parse(artistsString);
+  var artistsNames = Object.keys(artistsJson);
+  console.log(artistsNames);
+  var artists = '<div class="artists-images">';
+  for (var i = 0; i < artistsNames.length; i++) {
+    artists += '<div class="artist">'+
+          '<a href="artistImage?artist='+artistsNames[i]+'" data-lightbox="artists" data-title="'+getArtistDescription(artistsNames[i], artistsJson[artistsNames[i]])+'">'+
+          '<img src="artistImage?artist='+artistsNames[i]+'" alt="'+artistsNames[i]+'"/></a>'+
+          '<div class="subtitle">'+artistsNames[i]+'</div>'+
+          '</div>';
+  }
+  artists += '</div>';
+  $('.lineup').append(artists);
 }
